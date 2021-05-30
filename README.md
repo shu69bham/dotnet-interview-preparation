@@ -1,4 +1,4 @@
-# dotnet-interview-preparation
+# .NET Core Interview Preparation
 This repository is setup specifically for important topics that one should know for .NET core interview.
 
 # .NET Core important components
