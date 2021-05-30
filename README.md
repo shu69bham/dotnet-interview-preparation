@@ -7,7 +7,7 @@ This repository is setup specifically for important topics that one should know 
 
 ### `Kestrel server` - 
 
-Kestrel is an open source cross-platform server built to host .NET core applications and provide better performance than IIS server. It is lighweight and is not a full fledged server thus it is used behing more proper servers like IIS, nginx, apache, etc that act like a proxy to the kestrel server.
+Kestrel is an open source cross-platform server built to host .NET core applications and provide better performance than IIS server. It is lighweight and is not a full fledged server thus it is used behind more proper servers like IIS, nginx, apache, etc that act like a proxy to the kestrel server.
 
 Details - https://stackify.com/what-is-kestrel-web-server/
 
