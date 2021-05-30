@@ -17,5 +17,5 @@ https://stackify.com/kestrel-web-server-asp-net-core-kestrel-vs-iis/
 
 # Other useful links -
 
-### 'Deploying .NET Core apps on linux' -
+### `Deploying .NET Core apps on linux` -
 https://www.c-sharpcorner.com/article/how-to-deploy-net-core-application-on-linux/
