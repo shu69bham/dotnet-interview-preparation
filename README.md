@@ -31,11 +31,15 @@ Linking of different dlls is also done by CLR as and when needed while program e
 
 Used for connecting to databases. ORM tools like Nhibernate use ADO.NET internally to interact with database.
 
-### `Kestrel server` - 
+### `Kestrel Server` - 
 
 Kestrel is an open source cross-platform server built to host .NET core applications and provide better performance than IIS server. It is lighweight and is not a full fledged server thus it is used behind more proper servers like IIS, nginx, apache, etc that act like a proxy to the kestrel server.
 
 Details - https://stackify.com/what-is-kestrel-web-server/
+
+### `IIS Server` -
+
+Built in server provided by microsoft to host web applications. Supports various protocols like http, ftp, smtp, etc
 
 ### `Kestrel vs IIS` -
 
