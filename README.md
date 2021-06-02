@@ -43,9 +43,18 @@ Responsible for loading and running .NET application, garabage collection, execu
 
 ### `main() method` -
 
-- main() method is present inside Program.cs file. It is the starting point of the application.
+- main() method is present inside Program.cs file. It is the **starting point** of the application.
 - .NET core application starts as a console app and by calling the main() method, the configuration of asp.core is done and it kick starts .net core web application.
-- CreateWebHostBuilder(args).Build().Run() inside main() method creates a IWebHostBuilder, builds it and runs the application and starts listening to incoming http requests.
+- **CreateWebHostBuilder(args).Build().Run()** inside main() method creates a IWebHostBuilder, builds it and runs the application and starts listening to incoming http requests.
+- https://www.youtube.com/watch?v=X60RR34gKy0&list=PL6n9fhu94yhVkdrusLaQsfERmL_Jh4XmU&index=5
+
+### `Startup.cs` -
+
+- Consists of two methods ConfigureServices() and Configure().
+- **ConfigureServices()** method **configures the services** that are needed by the applications.
+- **Configure()** method **configures the request pipeline**.
+- Inside CreateWebHostBuilder() method present in Program.cs file, we can configure to use a different file apart from Startup.cs to act like Startup class.
+- **IWebHostBuilder** has an extension method **UserStartup<MyClassName>()**, that can be used to configure our own class to act as startup.
 
 ### `ADO.NET` -
 
