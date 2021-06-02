@@ -29,7 +29,7 @@ Responsible for loading and running .NET application, garabage collection, execu
 
 ### `ADO.NET` -
 
-Provides supporting methods for connecting to databases. ORM tools like Nhibernate use ADO.NET internally to interact with database.
+Provides supporting methods for connecting to databases through your .net application. ORM tools like Nhibernate use ADO.NET internally to interact with database.
 
 ### `Kestrel Server` - 
 
