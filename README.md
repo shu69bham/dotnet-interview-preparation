@@ -29,7 +29,7 @@ Linking of different dlls is also done by CLR as and when needed while program e
 
 ### `ADO.NET` -
 
-Used for connecting to databases. ORM tools like Nhibernate use ADO.NET internally to interact with database.
+Provides supporting methods for connecting to databases. ORM tools like Nhibernate use ADO.NET internally to interact with database.
 
 ### `Kestrel Server` - 
 
