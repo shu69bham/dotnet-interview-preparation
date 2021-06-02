@@ -1,7 +1,7 @@
 # .NET Core Interview Preparation
 This repository is setup specifically for important topics that one should know for .NET core interview.
 
-Best series on .NET core tutorials - https://www.youtube.com/watch?v=4IgC2Q5-yDE&list=PL6n9fhu94yhVkdrusLaQsfERmL_Jh4XmU&index=1 by # 'Kudvenkat' for detailed explanation of all .NET core entities and other components to build a web application.
+Best series on .NET core tutorials - https://www.youtube.com/watch?v=4IgC2Q5-yDE&list=PL6n9fhu94yhVkdrusLaQsfERmL_Jh4XmU&index=1 by **'Kudvenkat'** for detailed explanation of all .NET core entities and other components to build a web application.
 
 # .NET Core important components
 .NET core is made up of various components that help in smooth running of .net core across all platforms. Following is the list of few such components - 
@@ -9,11 +9,11 @@ Best series on .NET core tutorials - https://www.youtube.com/watch?v=4IgC2Q5-yDE
 
 ### `Compilation Process` - 
 
-High level language in vb or c# ==> Converted to 'MSIL' by the primary complier(either by vbc or csc) ==> MSIL is converted to Machine Code by 'JIT' Compiler
+High level language in **vb or c#** ==> Converted to **MSIL** by the primary complier(either by vbc or csc) ==> MSIL is converted to Machine Code by **JIT** Compiler
 
 NOTE : vbc = vb compiler, csc = c sharp compiler
 
-MSIL(Microsoft InterMediate Language) can be in .dll or .exe form depending if the high level code had a main method or not.
+**MSIL(Microsoft InterMediate Language) can be in .dll or .exe** form depending if the high level code had a main method or not.
 
 JIT(Just In Time) complier is a part of .NET runtime(also called as CLR i.e. Common Language Runtime).
 
@@ -35,7 +35,7 @@ Provides supporting methods for connecting to databases. ORM tools like Nhiberna
 
 ### `Kestrel Server` - 
 
-Kestrel is an open source cross-platform server built to host .NET core applications and provide better performance than IIS server. It is lighweight and is not a full fledged server thus it is used behind more proper servers like IIS, nginx, apache, etc that act like a proxy to the kestrel server.
+Kestrel is an open source cross-platform server built to host .NET core applications and provide **better performance than IIS server**. It is lighweight and is not a full fledged server thus it is **used behind more proper servers** like IIS, nginx, apache, etc that act like a proxy to the kestrel server.
 
 Details - https://stackify.com/what-is-kestrel-web-server/
 
@@ -50,4 +50,5 @@ https://stackify.com/kestrel-web-server-asp-net-core-kestrel-vs-iis/
 # Other useful links -
 
 ### `Deploying .NET Core apps on linux` -
+
 https://www.c-sharpcorner.com/article/how-to-deploy-net-core-application-on-linux/
