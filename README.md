@@ -6,11 +6,11 @@ Best series on **.NET core tutorials** - https://www.youtube.com/watch?v=4IgC2Q5
 # .NET Core important components
 Few Important points about .NET core -
 - Open Source
-- Cross-platform (Can be developed and run on multiple OS)
+- **Cross-platform** (Can be developed and run on multiple OS)
 - Light weight (Heavy unnecessary components were decoupled from the original ASP.NET)
 - High performance
 - Supports Dependency Injection out of the box
-- Modular (with built in support for request/response pipelines)
+- Modular (with built in support for **middlewares** for forming request/response pipelines)
 
 .NET core is made up of various components that help in smooth running of .net core across all platforms. Following is the list of few such components - 
 
