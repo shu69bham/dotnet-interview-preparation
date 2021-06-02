@@ -9,6 +9,7 @@ Few Important points about .NET core -
 - Cross-platform (Can be developed and run on multiple OS)
 - Light weight (Heavy unnecessary components were decoupled from the original ASP.NET)
 - High performance
+- Supports Dependency Injection out of the box
 
 .NET core is made up of various components that help in smooth running of .net core across all platforms. Following is the list of few such components - 
 
