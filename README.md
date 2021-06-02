@@ -7,13 +7,17 @@ This repository is setup specifically for important topics that one should know 
 
 ### `Compilation Process` - 
 
-High level language in vb or c# ==> Converted to 'MSIL' by the primary complier ==> MSIL is converted to Machine Code by 'JIT' Compiler
+High level language in vb or c# ==> Converted to 'MSIL' by the primary complier(either by vbc or csc) ==> MSIL is converted to Machine Code by 'JIT' Compiler
+
+NOTE : vbc = vb compiler, csc = c sharp compiler
 
 MSIL(Microsoft InterMediate Language) can be in .dll or .exe form depending if the high level code had a main method or not.
 
 JIT(Just In Time) complier is a part of .NET runtime.
 
 Eg. Mono runtime implements it's own JIT to convert MSIL to Linux. There are different Mono Runtimes for different platforms as per the user's need.
+
+Youtube video - https://www.youtube.com/watch?v=6oYcZ-D8Fyw&list=WL&index=3
 
 ### `Kestrel server` - 
 
