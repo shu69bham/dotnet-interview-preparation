@@ -5,6 +5,16 @@ This repository is setup specifically for important topics that one should know 
 .NET core is made up of various components that help in smooth running of .net core across all platforms. Following is the list of few such components - 
 
 
+### `Compilation Process` - 
+
+High level language in vb or c# ==> Converted to 'MSIL' by the primary complier ==> MSIL is converted to Machine Code by 'JIT' Compiler
+
+MSIL(Microsoft InterMediate Language) can be in .dll or .exe form depending if the high level code had a main method or not.
+
+JIT(Just In Time) complier is a part of .NET runtime.
+
+Eg. Mono runtime implements it's own JIT to convert MSIL to Linux. There are different Mono Runtimes for different platforms as per the user's need.
+
 ### `Kestrel server` - 
 
 Kestrel is an open source cross-platform server built to host .NET core applications and provide better performance than IIS server. It is lighweight and is not a full fledged server thus it is used behind more proper servers like IIS, nginx, apache, etc that act like a proxy to the kestrel server.
