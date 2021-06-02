@@ -17,9 +17,9 @@ Few Important points about .NET core -
 
 ### `.NET SDK vs .NET Runtime` - 
 
-.NET SDK is a complete package(superset) that comprises of all components needed to develop as well as run .net applications on a machine. Used in development environment.
+.NET SDK is a complete package(**superset**) that comprises of all components needed to **develop as well as run .net applications** on a machine. Used in development environment.
 
-.NET Runtime is only used for running .NET Applications. It does not include kit for developing apps. Used in production environment.
+.NET Runtime is **only used for running .NET Applications**. It does not include kit for developing apps. Used in production environment.
 
 ### `Compilation Process` - 
 
@@ -45,7 +45,7 @@ Responsible for loading and running .NET application, garabage collection, execu
 
 - main() method is present inside Program.cs file. It is the **starting point** of the application.
 - .NET core application starts as a console app and by calling the main() method, the configuration of asp.core is done and it kick starts .net core web application.
-- **CreateWebHostBuilder(args).Build().Run()** inside main() method creates a IWebHostBuilder, builds it and runs the application and starts listening to incoming http requests.
+- **CreateWebHostBuilder(args).Build().Run()** inside main() method is called that **creates a IWebHostBuilder**, builds it and runs the application and starts listening to incoming http requests.
 - https://www.youtube.com/watch?v=X60RR34gKy0&list=PL6n9fhu94yhVkdrusLaQsfERmL_Jh4XmU&index=5
 
 ### `Startup.cs` -
