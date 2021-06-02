@@ -4,13 +4,15 @@ This repository is setup specifically for important topics that one should know 
 Best series on **.NET core tutorials** - https://www.youtube.com/watch?v=4IgC2Q5-yDE&list=PL6n9fhu94yhVkdrusLaQsfERmL_Jh4XmU&index=1 by **Kudvenkat** for detailed explanation of all .NET core entities and other components to build a web application.
 
 # .NET Core important components
-.NET core is made up of various components that help in smooth running of .net core across all platforms. Following is the list of few such components - 
-
 Few Important points about .NET core -
 - Open Source
-- Cross-platform
+- Cross-platform (Can be developed and run on multiple OS)
+- Light weight (Heavy unnecessary components were decoupled from the original ASP.NET)
 - High performance
-- light weight
+
+.NET core is made up of various components that help in smooth running of .net core across all platforms. Following is the list of few such components - 
+
+
 
 ### `Compilation Process` - 
 
