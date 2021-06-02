@@ -41,6 +41,12 @@ Youtube video - https://www.youtube.com/watch?v=6oYcZ-D8Fyw&list=PLWPirh4EWFpGn_
 
 Responsible for loading and running .NET application, garabage collection, execution and maintaining parallel threads, etc. Linking of different dlls is also done by CLR as and when needed while program execution.
 
+### `main() method` -
+
+- main() method is present inside Program.cs file. It is the starting point of the application.
+- .NET core application starts as a console app and by calling the main() method, the configuration of asp.core is done and it kick starts .net core web application.
+- CreateWebHostBuilder(args).Build().Run() inside main() method creates a IWebHostBuilder, builds it and runs the application and starts listening to incoming http requests.
+
 ### `ADO.NET` -
 
 Provides supporting methods for connecting to databases through your .net application. ORM tools like **Nhibernate use ADO.NET internally** to interact with database.
