@@ -54,7 +54,7 @@ Responsible for loading and running .NET application, garabage collection, execu
 - **ConfigureServices()** method **configures the services** that are needed by the applications.
 - **Configure()** method **configures the request pipeline**.
 - Inside CreateWebHostBuilder() method present in Program.cs file, we can configure to use a different file apart from Startup.cs to act like Startup class.
-- **IWebHostBuilder** has an extension method **UserStartup<MyClassName>()**, that can be used to configure our own class to act as startup.
+- **IWebHostBuilder** has an extension method **UserStartup<>()**, that can be used to configure our own class to act as startup.
 
 ### `ADO.NET` -
 
