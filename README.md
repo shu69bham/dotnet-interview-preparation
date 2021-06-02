@@ -6,7 +6,11 @@ Best series on **.NET core tutorials** - https://www.youtube.com/watch?v=4IgC2Q5
 # .NET Core important components
 .NET core is made up of various components that help in smooth running of .net core across all platforms. Following is the list of few such components - 
 
-
+Few Important points about .NET core -
+- Open Source
+- Cross-platform
+- High performance
+- light weight
 
 ### `Compilation Process` - 
 
