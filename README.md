@@ -15,6 +15,11 @@ Few Important points about .NET core -
 .NET core is made up of various components that help in smooth running of .net core across all platforms. Following is the list of few such components - 
 
 
+### `.NET SDK vs .NET Runtime` - 
+
+.NET SDK is a complete package(superset) that comprises of all components needed to develop as well as run .net applications on a machine. Used in development environment.
+
+.NET Runtime is only used for running .NET Applications. It does not include kit for developing apps. Used in production environment.
 
 ### `Compilation Process` - 
 
