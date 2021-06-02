@@ -9,7 +9,7 @@ Best series on .NET core tutorials - https://www.youtube.com/watch?v=4IgC2Q5-yDE
 
 ### `Compilation Process` - 
 
-High level language in **vb or c#** ==> Converted to **MSIL** by the primary complier(either by vbc or csc) ==> MSIL is converted to Machine Code by **JIT** Compiler
+High level language in **vb or c#** ==> Converted to **MSIL** by the primary complier(either by vbc or csc) ==> MSIL is converted to Machine Code by **JIT** Compiler.
 
 NOTE : vbc = vb compiler, csc = c sharp compiler
 
@@ -25,9 +25,7 @@ Youtube video - https://www.youtube.com/watch?v=6oYcZ-D8Fyw&list=PLWPirh4EWFpGn_
 
 ### `CLR(Common Language Runtime)` -
 
-Responsible for loading and running .NET application, garabage collection, execution and maintaining parallel threads, etc
-
-Linking of different dlls is also done by CLR as and when needed while program execution.
+Responsible for loading and running .NET application, garabage collection, execution and maintaining parallel threads, etc. Linking of different dlls is also done by CLR as and when needed while program execution.
 
 ### `ADO.NET` -
 
