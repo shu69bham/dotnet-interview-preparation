@@ -13,11 +13,21 @@ NOTE : vbc = vb compiler, csc = c sharp compiler
 
 MSIL(Microsoft InterMediate Language) can be in .dll or .exe form depending if the high level code had a main method or not.
 
-JIT(Just In Time) complier is a part of .NET runtime.
+JIT(Just In Time) complier is a part of .NET runtime(also called as CLR i.e. Common Language Runtime).
+
+Conversion of high level languages like vb/c# to MSIL is done by taking into consideraion CLS(Common Language Specification) and CTS(Common Type System) that define how a program or data type is used and converted to the corresponding MSIL.
 
 Eg. Mono runtime implements it's own JIT to convert MSIL to Linux. There are different Mono Runtimes for different platforms as per the user's need.
 
-Youtube video - https://www.youtube.com/watch?v=6oYcZ-D8Fyw&list=WL&index=3
+Youtube video - https://www.youtube.com/watch?v=6oYcZ-D8Fyw&list=PLWPirh4EWFpGn__IAQDYgdX0VuJ0aCqDK&index=2
+
+### `CLR(Common Language Runtime)` -
+
+Responsible for loading and running .NET application, garabage collection, execution and maintaining parallel threads, etc
+
+### 'ADO.NET' -
+
+Used for connecting to databases. ORM tools like Nhibernate use ADO.NET internally to interact with database.
 
 ### `Kestrel server` - 
 
