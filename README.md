@@ -10,6 +10,7 @@ Few Important points about .NET core -
 - Light weight (Heavy unnecessary components were decoupled from the original ASP.NET)
 - High performance
 - Supports Dependency Injection out of the box
+- Modular (with built in support for request/response pipelines)
 
 .NET core is made up of various components that help in smooth running of .net core across all platforms. Following is the list of few such components - 
 
