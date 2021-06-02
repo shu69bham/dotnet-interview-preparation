@@ -14,11 +14,11 @@ High level language in **vb or c#** ==> Converted to **MSIL** by the primary com
 
 NOTE : vbc = vb compiler, csc = c sharp compiler
 
-- **MSIL(Microsoft InterMediate Language) can be in .dll or .exe** form depending if the high level code had a main method or not.
+- **MSIL(Microsoft InterMediate Language) can be in .dll or .exe** form depending if the high level code had a **main() method** or not.
 
-- JIT(Just In Time) complier is a part of .NET runtime(also called as CLR i.e. Common Language Runtime).
+- **JIT(Just In Time)** complier is a part of .NET runtime(also called as CLR i.e. Common Language Runtime).
 
-- Conversion of high level languages like vb/c# to MSIL is done by taking into consideraion CLS(Common Language Specification) and CTS(Common Type System) that define how a program or data type is used and converted to the corresponding MSIL.
+- Conversion of high level languages like vb/c# to MSIL is done by taking into consideraion **CLS**(Common Language Specification) and **CTS**(Common Type System) that define how a program or data type is used and converted to the corresponding MSIL.
 
 - Eg. Mono runtime implements it's own JIT to convert MSIL to Linux. There are different Mono Runtimes for different platforms as per the user's need.
 
