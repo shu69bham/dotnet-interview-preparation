@@ -25,6 +25,8 @@ Youtube video - https://www.youtube.com/watch?v=6oYcZ-D8Fyw&list=PLWPirh4EWFpGn_
 
 Responsible for loading and running .NET application, garabage collection, execution and maintaining parallel threads, etc
 
+Linking of different dlls is also done by CLR as and when needed while program execution.
+
 ### 'ADO.NET' -
 
 Used for connecting to databases. ORM tools like Nhibernate use ADO.NET internally to interact with database.
