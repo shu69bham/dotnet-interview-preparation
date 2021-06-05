@@ -77,11 +77,12 @@ Provides supporting methods for connecting to databases through your .net applic
 - It has **2 webservers(Internal and External web servers).** External = Reverse Proxies or Client facing web servers, Internal = Servers receiving requests from proxy server.
 - **IIS/Nginx/Apache are used as reverse proxy servers** alongwith the Kestrel server at the backend.
 - Reverse proxy servers adds an additonal layer of configuration and security. These servers integrate better with the existing infastructure unlike Kestrel which is a light weight server. It can also be used for load balancing multiple instances of applications running using Kestrel server.
-- 
 
 ### `Kestrel Server` - 
 
 Kestrel is an open source cross-platform server built to host .NET core applications and provide **better performance than IIS server**. It is lighweight and is not a full fledged server thus it is **used behind more proper servers** like IIS, nginx, apache, etc that act like a proxy to the kestrel server.
+
+Reason why Kestrel is made light weight is because it typically runs behind serves like Nginx/IIS/Apache in production that provide the additonal work of security, load balancing, etc. Thus the job of kestrel is only to process incoming http requests and not be bothered about anything else.
 
 Details - https://stackify.com/what-is-kestrel-web-server/
 
