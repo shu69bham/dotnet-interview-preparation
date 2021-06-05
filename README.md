@@ -60,6 +60,25 @@ Responsible for loading and running .NET application, garabage collection, execu
 
 Provides supporting methods for connecting to databases through your .net application. ORM tools like **Nhibernate use ADO.NET internally** to interact with database.
 
+### `In Process Hosting` - 
+
+- By Default in windows we get IIS server.
+- In the **.csproj** file, mapping for hosting is done by the tag <AspNetCorHostingModel>InProcess</AspNetCorHostingModel>
+- Setting it to InProcess, **CreateWebHostBuilder() internally calls UseIIS()** method which uses IIS worker process for hosting the application.
+- **InProcess** hosts the webserver in IIS(**w3wp.exe**) or IISExpress(**iisexpress.exe**).
+-  **Visual Studio** **by** **default** **uses** **iisexpress.exe**(light weight version of IIS optimized for developing applications only, not for production).
+-  If however we run the application by using **dotnet run** command, then it build and runs using the **Kestrel server(dotnet.exe)**.
+-  In Production we use IIS, Nginx alongwith Kestrel server.
+-  NOTE : from .NET core 3, the process name is the project name and not dotnet.exe anymore(Eg. ToplogyPlanner.exe)
+
+### `Out of Process Hosting` - 
+
+- In the **.csproj** file, mapping for hosting is done by the tag <AspNetCorHostingModel>OutOfProcess</AspNetCorHostingModel>
+- It has **2 webservers(Internal and External web servers).** External = Reverse Proxies or Client facing web servers, Internal = Servers receiving requests from proxy server.
+- **IIS/Nginx/Apache are used as reverse proxy servers** alongwith the Kestrel server at the backend.
+- Reverse proxy servers adds an additonal layer of configuration and security. These servers integrate better with the existing infastructure unlike Kestrel which is a light weight server. It can also be used for load balancing multiple instances of applications running using Kestrel server.
+- 
+
 ### `Kestrel Server` - 
 
 Kestrel is an open source cross-platform server built to host .NET core applications and provide **better performance than IIS server**. It is lighweight and is not a full fledged server thus it is **used behind more proper servers** like IIS, nginx, apache, etc that act like a proxy to the kestrel server.
