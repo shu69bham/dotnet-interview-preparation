@@ -63,7 +63,7 @@ Provides supporting methods for connecting to databases through your .net applic
 ### `In Process Hosting` - 
 
 - By Default in windows we get IIS server.
-- In the **.csproj** file, mapping for hosting is done by the tag <AspNetCorHostingModel>InProcess</AspNetCorHostingModel>
+- In the **.csproj** file, mapping for hosting is done by the tag "AspNetCorHostingModel" and setting it to InProcess
 - Setting it to InProcess, **CreateWebHostBuilder() internally calls UseIIS()** method which uses IIS worker process for hosting the application.
 - **InProcess** hosts the webserver in IIS(**w3wp.exe**) or IISExpress(**iisexpress.exe**).
 -  **Visual Studio** **by** **default** **uses** **iisexpress.exe**(light weight version of IIS optimized for developing applications only, not for production).
@@ -73,7 +73,7 @@ Provides supporting methods for connecting to databases through your .net applic
 
 ### `Out of Process Hosting` - 
 
-- In the **.csproj** file, mapping for hosting is done by the tag <AspNetCorHostingModel>OutOfProcess</AspNetCorHostingModel>
+- In the **.csproj** file, mapping for hosting is done by the tag "AspNetCorHostingModel" and setting it to OutOfProcess
 - It has **2 webservers(Internal and External web servers).** External = Reverse Proxies or Client facing web servers, Internal = Servers receiving requests from proxy server.
 - **IIS/Nginx/Apache are used as reverse proxy servers** alongwith the Kestrel server at the backend.
 - Reverse proxy servers adds an additonal layer of configuration and security. These servers integrate better with the existing infastructure unlike Kestrel which is a light weight server. It can also be used for load balancing multiple instances of applications running using Kestrel server.
