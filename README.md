@@ -102,7 +102,7 @@ https://www.youtube.com/watch?v=u2S4TkkACVc&list=PL6n9fhu94yhVkdrusLaQsfERmL_Jh4
 
 ### `Kestrel Server` - 
 
-Kestrel is an open source cross-platform server built to host .NET core applications and provide **better performance than IIS server**. It is lighweight and is not a full fledged server thus it is **used behind more proper servers** like IIS, nginx, apache, etc that act like a proxy to the kestrel server.
+Kestrel is an open source cross-platform server **built to host .NET core applications only** and provide **better performance than IIS server**. It is lighweight and is not a full fledged server thus it is **used behind more proper servers** like IIS, nginx, apache, etc that act like a proxy to the kestrel server.
 
 Reason why Kestrel is made light weight is because it typically runs behind serves like Nginx/IIS/Apache in production that provide the additonal work of security, load balancing, etc. Thus the job of kestrel is only to process incoming http requests and not be bothered about anything else.
 
