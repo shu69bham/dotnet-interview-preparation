@@ -91,11 +91,14 @@ NOTE : Process.GetCurrentProcess().ProcessName reports w3wp/iisexpress (in-proce
 Configuration file for storing launch related configuration. Can have the following command names -
 - IISExpress
 - Project
+
 By default visual studio is set to launch IISExpress profile i.e. you app is hosted on IIS Express(If the AppNetCoreHostingModel in .csproj is InProcess).
+
 If however user choses Project profile then the app is hosted in Kestrel server(If the AppNetCoreHostingModel in .csproj is InProcess).
+
 If however user choses Project profile and the AppNetCoreHostingModel is OutOfProcess then the app is hosted in Kestrel server internally and IIS acts as a reverse proxy server.
 
-NOTE : https://www.youtube.com/watch?v=u2S4TkkACVc&list=PL6n9fhu94yhVkdrusLaQsfERmL_Jh4XmU&index=8
+https://www.youtube.com/watch?v=u2S4TkkACVc&list=PL6n9fhu94yhVkdrusLaQsfERmL_Jh4XmU&index=8
 
 ### `Kestrel Server` - 
 
