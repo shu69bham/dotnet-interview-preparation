@@ -84,6 +84,8 @@ https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/iis/in-process-host
 
 https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/iis/out-of-process-hosting?view=aspnetcore-5.0
 
+NOTE : Process.GetCurrentProcess().ProcessName reports w3wp/iisexpress (in-process) or dotnet (out-of-process).
+
 ### `Kestrel Server` - 
 
 Kestrel is an open source cross-platform server built to host .NET core applications and provide **better performance than IIS server**. It is lighweight and is not a full fledged server thus it is **used behind more proper servers** like IIS, nginx, apache, etc that act like a proxy to the kestrel server.
