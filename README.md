@@ -95,6 +95,8 @@ By default visual studio is set to launch IISExpress profile i.e. you app is hos
 If however user choses Project profile then the app is hosted in Kestrel server(If the AppNetCoreHostingModel in .csproj is InProcess).
 If however user choses Project profile and the AppNetCoreHostingModel is OutOfProcess then the app is hosted in Kestrel server internally and IIS acts as a reverse proxy server.
 
+NOTE : https://www.youtube.com/watch?v=u2S4TkkACVc&list=PL6n9fhu94yhVkdrusLaQsfERmL_Jh4XmU&index=8
+
 ### `Kestrel Server` - 
 
 Kestrel is an open source cross-platform server built to host .NET core applications and provide **better performance than IIS server**. It is lighweight and is not a full fledged server thus it is **used behind more proper servers** like IIS, nginx, apache, etc that act like a proxy to the kestrel server.
