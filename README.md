@@ -86,6 +86,15 @@ https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/iis/out-of-process-
 
 NOTE : Process.GetCurrentProcess().ProcessName reports w3wp/iisexpress (in-process) or dotnet (out-of-process).
 
+### `launchsettings.json`-
+
+Configuration file for storing launch related configuration. Can have the following command names -
+- IISExpress
+- Project
+By default visual studio is set to launch IISExpress profile i.e. you app is hosted on IIS Express(If the AppNetCoreHostingModel in .csproj is InProcess).
+If however user choses Project profile then the app is hosted in Kestrel server(If the AppNetCoreHostingModel in .csproj is InProcess).
+If however user choses Project profile and the AppNetCoreHostingModel is OutOfProcess then the app is hosted in Kestrel server internally and IIS acts as a reverse proxy server.
+
 ### `Kestrel Server` - 
 
 Kestrel is an open source cross-platform server built to host .NET core applications and provide **better performance than IIS server**. It is lighweight and is not a full fledged server thus it is **used behind more proper servers** like IIS, nginx, apache, etc that act like a proxy to the kestrel server.
