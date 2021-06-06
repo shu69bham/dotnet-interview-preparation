@@ -64,12 +64,16 @@ Provides supporting methods for connecting to databases through your .net applic
 
 - By Default in windows we get IIS server.
 - In the **.csproj** file, mapping for hosting is done by the tag "AspNetCorHostingModel" and setting it to InProcess
-- Setting it to InProcess, **CreateWebHostBuilder() internally calls UseIIS()** method which uses IIS worker process for hosting the application.
+- Setting it to InProcess, **CreateWebHostBuilder() internally calls UseIIS()** method which uses **IIS worker process** for hosting the application.
 - **InProcess** hosts the webserver in IIS(**w3wp.exe**) or IISExpress(**iisexpress.exe**).
 -  **Visual Studio** **by** **default** **uses** **iisexpress.exe**(light weight version of IIS optimized for developing applications only, not for production).
 -  If however we run the application by using **dotnet run** command, then it build and runs using the **Kestrel server(dotnet.exe)**.
 -  In Production we use IIS, Nginx alongwith Kestrel server.
 -  NOTE : from .NET core 3, the process name is the project name and not dotnet.exe anymore(Eg. ToplogyPlanner.exe)
+-  NOTE : **A worker process in the context of IIS is one that can execute web applications** and is responsible for handling the requests **specific to a particular application pool**.
+-  NOTE : **An application pool serves as a container** for your applications in IIS
+
+https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/iis/in-process-hosting?view=aspnetcore-5.0
 
 ### `Out of Process Hosting` - 
 
@@ -77,6 +81,8 @@ Provides supporting methods for connecting to databases through your .net applic
 - It has **2 webservers(Internal and External web servers).** External = Reverse Proxies or Client facing web servers, Internal = Servers receiving requests from proxy server.
 - **IIS/Nginx/Apache are used as reverse proxy servers** alongwith the Kestrel server at the backend.
 - Reverse proxy servers adds an additonal layer of configuration and security. These servers integrate better with the existing infastructure unlike Kestrel which is a light weight server. It can also be used for load balancing multiple instances of applications running using Kestrel server.
+
+https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/iis/out-of-process-hosting?view=aspnetcore-5.0
 
 ### `Kestrel Server` - 
 
@@ -90,9 +96,20 @@ Details - https://stackify.com/what-is-kestrel-web-server/
 
 Built in server provided by microsoft to host web applications. Supports various protocols like http, ftp, smtp, etc
 
+https://stackify.com/iis-web-server/
+
 ### `Kestrel vs IIS` -
 
 https://stackify.com/kestrel-web-server-asp-net-core-kestrel-vs-iis/
+
+### `General flow of a HTTP request` -
+
+- A request arrives from the web to the kernel-mode HTTP.sys driver.
+- The driver routes the native request to IIS on the website's configured port, usually **80 (HTTP) or 443 (HTTPS)**.
+- After the IIS HTTP Server processes the request the request is sent to the ASP.NET Core middleware pipeline(Configure() method inside Startup.cs configures the pipeline).
+- The middleware pipeline handles the request and passes it on as an HttpContext instance to the app's logic.
+- The app's response is passed back to IIS.
+- IIS sends the response to the client that initiated the request.
 
 # Other useful links -
 
