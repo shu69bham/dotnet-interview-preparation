@@ -100,6 +100,22 @@ If however user choses Project profile and the AppNetCoreHostingModel is OutOfPr
 
 https://www.youtube.com/watch?v=u2S4TkkACVc&list=PL6n9fhu94yhVkdrusLaQsfERmL_Jh4XmU&index=8
 
+### `Configuration files`-
+
+ASP.NET core can store configuration at various places as below -
+- **appsettings.json**
+- appsettings.{Environment}.json
+- User Secrets
+- Environment variables
+- Command Line Arguements
+
+Precedence order shown above is from low to high. **Any key present at higher precendence order will overwrite the once in lower precendence order**.
+The above **configurations are injected through the IConfigurationService interface** that stored the mapping of all key-value pairs across all configuration sources.
+
+Eg. Key in appsettings.production.json will overwrite the value in appsettings.json. Similarly key in Environment variable will overwrite the value in appsettings.production.json file.
+
+https://www.youtube.com/watch?v=m_BevGi7zBw&list=PL6n9fhu94yhVkdrusLaQsfERmL_Jh4XmU&index=9
+
 ### `Kestrel Server` - 
 
 Kestrel is an open source cross-platform server **built to host .NET core applications only** and provide **better performance than IIS server**. It is lighweight and is not a full fledged server thus it is **used behind more proper servers** like IIS, nginx, apache, etc that act like a proxy to the kestrel server.
