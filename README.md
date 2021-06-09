@@ -157,7 +157,7 @@ https://stackify.com/kestrel-web-server-asp-net-core-kestrel-vs-iis/
 - Logging Middleware automatically logs the incoming HTTP requests and ocassionally responses(when there in an exception).
 - Middleware components are **executed in order** as they are added.
 - **Add your middleware but calling the Use() method of IApplicationBuilder** inside Startup.cs file or simply create an extension method for it.
-- We can use **Run() method of IApplicationBuilder** but that creates a **terminal middleware**. Use() takes two arguement, HttpContext and next middleware, thus we can call next() inside Use() to call to the next middleware.
+- We can use **Run() method of IApplicationBuilder** but that creates a **terminal middleware**. Use() takes two arguement, HttpContext and next middleware, thus we can call next.Invoke() inside Use() to call the next middleware configured in the pipeline.
 - Eg. **app.Use(async (context, next) => { //do your code; await next.Invoke(); });** Notice there is a **next parameter in delegate to Invoke the next middleware in the pipeline**.
 - For **terminal middleware** we write as **app.Run(async (context) => { //do your code; });** Notice that **there is no next parameter.** in the delegate.
 - Serving **static files need to be in a special folder called wwwroot**, and for that you need **Static Middleware**.
