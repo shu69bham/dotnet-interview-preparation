@@ -39,7 +39,11 @@ Youtube video - https://www.youtube.com/watch?v=6oYcZ-D8Fyw&list=PLWPirh4EWFpGn_
 
 ### `CLR(Common Language Runtime)` -
 
-Responsible for loading and running .NET application, garabage collection, execution and maintaining parallel threads, etc. Linking of different dlls is also done by CLR as and when needed while program execution.
+Responsible for **loading and running** .NET application, garabage collection, execution and maintaining parallel threads, etc. **Linking of different dlls is also done by CLR as and when needed** while program execution.
+
+Host or Windows (the OS) will be running at Start, the CLR won’t begin execution until Windows starts it. When an application executes, OS inspects the file to see whether it has a special header to indicate that it is a .NET application. If not, Windows continues to run the application.**If an application is for .NET, Windows starts up the CLR and passes the application to the CLR for execution**. The CLR loads the executable assembly, finds the entry point, and begins its execution process.
+
+Article Link - https://medium.com/@mirzafarrukh13/common-language-runtime-dotnet-83e0218edcae
 
 ### `main() method` -
 
@@ -138,7 +142,8 @@ https://stackify.com/kestrel-web-server-asp-net-core-kestrel-vs-iis/
 
 - A request arrives from the web to the kernel-mode HTTP.sys driver.
 - The driver routes the native request to IIS on the website's configured port, usually **80 (HTTP) or 443 (HTTPS)**.
-- After the IIS HTTP Server processes the request the request is sent to the ASP.NET Core middleware pipeline(Configure() method inside Startup.cs configures the pipeline).
+- Host(Operating System) makes sure that CLR(Common Lanuague Runtime) is loaded whenever first ever request to run a .NET module comes.
+- The request is sent to the ASP.NET Core middleware pipeline(Configure() method inside Startup.cs configures the pipeline).
 - The middleware pipeline handles the request and passes it on as an HttpContext instance to the app's logic.
 - The app's response is passed back to IIS.
 - IIS sends the response to the client that initiated the request.
