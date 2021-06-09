@@ -158,9 +158,16 @@ https://stackify.com/kestrel-web-server-asp-net-core-kestrel-vs-iis/
 - Middleware components are **executed in order** as they are added.
 - **Add your middleware but calling the Use() method of IApplicationBuilder** inside Startup.cs file or simply create an extension method for it.
 - We can use **Run() method of IApplicationBuilder** but that creates a **terminal middleware**. Use() takes two arguement, HttpContext and next middleware, thus we can call next() inside Use() to call to the next middleware.
-- Eg. **app.Use(async (context, next) => { //do your code; await next.Invoke(); });**
-- For **terminal middleware** we write as **app.Run(async (context) => { //do your code; });** Observe that **there is no next parameter.**
+- Eg. **app.Use(async (context, next) => { //do your code; await next.Invoke(); });** Notice there is a **next parameter in delegate to Invoke the next middleware in the pipeline**.
+- For **terminal middleware** we write as **app.Run(async (context) => { //do your code; });** Notice that **there is no next parameter.** in the delegate.
 - Serving **static files need to be in a special folder called wwwroot**, and for that you need **Static Middleware**.
+
+Few Important middleware configured in Startup.cs are as follows -
+- **app.UseStaticFiles()**
+- **app.UseAuthentication()**
+- **app.UseAuthorization()**
+
+Notice the **UseMiddlewareName() format for writing extension methods of middlewares**. Similar for like **AddServiceName() is used while writing extension methods for adding services**.
 
 MSDN article - https://docs.microsoft.com/en-us/aspnet/core/fundamentals/middleware/?view=aspnetcore-5.0
 
