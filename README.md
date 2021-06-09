@@ -126,6 +126,8 @@ Kestrel is an open source cross-platform server **built to host .NET core applic
 
 Reason why Kestrel is made light weight is because it typically runs behind serves like Nginx/IIS/Apache in production that provide the additonal work of security, load balancing, etc. Thus the job of kestrel is only to process incoming http requests and not be bothered about anything else.
 
+**Default WebHostBuilder in Program.cs is configured to use Kestrel by default as the web server.**
+
 Details - https://stackify.com/what-is-kestrel-web-server/
 
 ### `IIS Server` -
@@ -147,6 +149,25 @@ https://stackify.com/kestrel-web-server-asp-net-core-kestrel-vs-iis/
 - The middleware pipeline handles the request and passes it on as an HttpContext instance to the app's logic.
 - The app's response is passed back to IIS.
 - IIS sends the response to the client that initiated the request.
+
+### `Middleware` -
+
+- Middleware is a piece of code in .NET core that can handle an HTTP Request or an HTTP Response (Eg. Authentication Middleware, MVC Middleware)
+- Middlewares are **configured in Configure()** method of **Startup.cs** file.
+- Logging Middleware automatically logs the incoming HTTP requests and ocassionally responses(when there in an exception).
+- Middleware components are **executed in order** as they are added.
+- **Add your middleware but calling the Use() method of IApplicationBuilder** inside Startup.cs file or simply create an extension method for it.
+- We can use **Run() method of IApplicationBuilder** but that creates a **terminal middleware**. Use() takes two arguement, HttpContext and next middleware, thus we can call next() inside Use() to call to the next middleware.
+- Eg. **app.Use(async (context, next) => { //do your code; await next.Invoke(); });**
+- For **terminal middleware** we write as **app.Run(async (context) => { //do your code; });** Observe that **there is no next parameter.**
+- Serving **static files need to be in a special folder called wwwroot**, and for that you need **Static Middleware**.
+
+MSDN article - https://docs.microsoft.com/en-us/aspnet/core/fundamentals/middleware/?view=aspnetcore-5.0
+
+### `WebHost.CreateDefaultBuilder(string[] args)` -
+
+- Extension method inside WebHost.cs class
+- Creates a default web host builder with some pre-configured default settings like using Kestrel as default web server, Logging, using configurations files etc
 
 # Other useful links -
 
