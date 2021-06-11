@@ -192,6 +192,9 @@ MSDN article - https://docs.microsoft.com/en-us/aspnet/core/fundamentals/middlew
 - ConfigureServices() has **IServiceCollection** interface injected as parameter which stores the list of all dependecies in an application.
 - Eg. services.AddMvc() is used to register the services required by the MVC framework.
 - **IServiceCollection** contains three extension methods to register dependencies - **AddScoped(), AddSingleton(), AddTransient().**
+- AddSingleton - Creates only a single instance in an application.
+- AddScoped - Creates an instance for every new user request(Eg. for every new HTTP request).
+- AddTransient - Creates a new instance every time the service needs to be injected(Even if it is required multiple times in the same request).
 - We use dependecy injection for Inversion of Control i.e. classes should not bother about creating dependent object's instances.
 - It also helps in lose coupling, because in future if we have to configure a different implementation of an interface then we can do that at just once single instance i.e. inside the ConfigureServices() method where the dependency was registered.
 - Unit testing also becomes possible as a MockRepository can be used by the testing framework instead of passing a hard coded dependency.
