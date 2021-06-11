@@ -186,6 +186,15 @@ MSDN article - https://docs.microsoft.com/en-us/aspnet/core/fundamentals/middlew
 - **Development, Staging and Production** are the three types of hosting enviroments.
 - By **default** environment variable ASPNETCORE_ENVIRONMENT is set to **Production**.
 
+### `Dependency Injection` -
+
+- **ConfigureServices()** method inside Startup.cs is used to register any dependecy.
+- ConfigureServices() has **IServiceCollection** interface injected as parameter which stores the list of all dependecies in an application.
+- Eg. services.AddMvc() is used to register the services required by the MVC framework.
+- **IServiceCollection** contains three extension methods to register dependencies - **AddScoped(), AddSingleton(), AddTransient().**
+- We use dependecy injection for Inversion of Control i.e. classes should not bother about creating dependent object's instances.
+- It also helps in lose coupling, because in future if we have to configure a different implementation of an interface then we can do that at just once single instance i.e. inside the ConfigureServices() method where the dependency was registered.
+
 # Other useful links -
 
 ### `Deploying .NET Core apps on linux` -
