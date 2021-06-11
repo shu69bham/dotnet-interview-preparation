@@ -194,6 +194,7 @@ MSDN article - https://docs.microsoft.com/en-us/aspnet/core/fundamentals/middlew
 - **IServiceCollection** contains three extension methods to register dependencies - **AddScoped(), AddSingleton(), AddTransient().**
 - We use dependecy injection for Inversion of Control i.e. classes should not bother about creating dependent object's instances.
 - It also helps in lose coupling, because in future if we have to configure a different implementation of an interface then we can do that at just once single instance i.e. inside the ConfigureServices() method where the dependency was registered.
+- Unit testing also becomes possible as a MockRepository can be used by the testing framework instead of passing a hard coded dependency.
 
 # Other useful links -
 
