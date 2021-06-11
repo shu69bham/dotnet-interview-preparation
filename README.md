@@ -102,6 +102,8 @@ If however **user choses Project profile** then the app is **hosted in Kestrel s
 
 If however user choses Project profile and the AppNetCoreHostingModel is OutOfProcess then the app is hosted in Kestrel server internally and IIS acts as a reverse proxy server.
 
+**We can set environment variable from here as well**.
+
 https://www.youtube.com/watch?v=u2S4TkkACVc&list=PL6n9fhu94yhVkdrusLaQsfERmL_Jh4XmU&index=8
 
 ### `Configuration files`-
@@ -175,6 +177,14 @@ MSDN article - https://docs.microsoft.com/en-us/aspnet/core/fundamentals/middlew
 
 - Extension method inside WebHost.cs class
 - Creates a default web host builder with some pre-configured default settings like using Kestrel as default web server, Logging, using configurations files etc
+
+### `Environment variables` -
+
+- In asp.net core, environment information is stored in an environment variable named **ASPNETCORE_ENVIRONMENT**. This variable determines on which environment is the app running and accordingly can be used in our application to configure different properties.
+- **IHostingEnvironment**(already injected into the configure method) contains an extension method named **IsDevelopment**(), **IsProduction**() and **IsStaging()** to determine the environment type on which the app is running. Also there is a property named EnvironmentName which we can use to print the environment type.
+- Environment variables can be either set manually or we can set them in launchsettings.json file.
+- **Development, Staging and Production** are the three types of hosting enviroments.
+- By **default** environment variable ASPNETCORE_ENVIRONMENT is set to **Production**.
 
 # Other useful links -
 
